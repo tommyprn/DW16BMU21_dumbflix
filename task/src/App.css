@@ -1,13 +1,11 @@
-.App {
-}
 a{
   padding-left: 25px;
 }
-a:link, a:visited {
+a:link, a:visited{
   color: white;
   text-decoration: none;
 }
-a:hover, a:active {
+a:hover, a:active{
   color: darkgray;
   text-decoration: none;
 }
@@ -76,7 +74,6 @@ a:hover, a:active {
 .preview{
   position: relative;
   width: 100%;
-  height: auto;
 }
 
 .judul{
@@ -121,4 +118,21 @@ a:hover, a:active {
   padding-right: 8px;
   padding-top: 2px;
   padding-bottom: 4px;
+}
+
+.watch{
+  position: absolute;
+  width: 300px;
+  height: 60px;
+  left: 150px;
+  top: 430px;
+  background-color: #E50914;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-family: Product Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 150.2%;
 }
