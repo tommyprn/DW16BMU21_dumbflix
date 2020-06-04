@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import '../App.css';
 import Header from '../component/header';
 import Content from '../component/content';
+import Headlog from '../component/headlog';
 
 
 class Home extends Component {
@@ -9,8 +10,8 @@ class Home extends Component {
     return (
       <div className="homes">
         <Header />
-        <div className="preview">
-          <div className="jumbo">
+        
+          <div className="jumbo" >
             <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/101701370_3056727111033322_8855875788692520960_o.jpg?_nc_cat=108&_nc_sid=730e14&_nc_eui2=AeHxTYZZG0eZeG4uKpPet90KR6zylArG8vdHrPKUCsby9w2jdE8sYuI63Z9zK_UO8mFqfDTfC2BvlgsArRmg5MUh&_nc_ohc=5z1HmtZedf0AX8rDd2h&_nc_ht=scontent-sin6-2.xx&oh=4db110d5f59deb98c0c3bc05cd363e24&oe=5EFE084B"/>
           </div>
 
@@ -29,7 +30,7 @@ class Home extends Component {
           </div>
 
             <button className="watch">WATCH NOW !</button>
-          </div>
+        
         <Content />
       </div>
     )
