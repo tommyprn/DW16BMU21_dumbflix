@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import '../App.css';
 import Header from '../component/header';
-import Content from '../component/content';
+import Seri from '../component/seri';
+import Mov from '../component/mov';
 
 
 class Home extends Component {
@@ -30,7 +31,8 @@ class Home extends Component {
 
             <button className="watch">WATCH NOW !</button>
           </div>
-        <Content />
+        <Seri />
+        <Mov />
       </div>
     )
   }

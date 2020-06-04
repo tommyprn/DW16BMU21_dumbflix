@@ -80,9 +80,6 @@ img{
   position: relative;
 }
 
-.jumbo{
-}
-
 .judul{
   position: absolute;
   left: 150px;
@@ -150,12 +147,6 @@ img{
   line-height: 150.2%;
 }
 
-.latest{
-  background-color: black;
-  color: #000;
-  all: black;
-}
-
 .series{
   position: absolute;
   left: 54px;
@@ -164,7 +155,7 @@ img{
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
-  color: black;
+  color: white;
 }
 
 .thumbnail-series{
@@ -173,11 +164,14 @@ img{
   top: 900px;
   padding-right: 44px;
   padding-left: 15px;
+  color: white;
 }
 
 .thumbnail-series img{
   width: 80%;
   height: auto;
+  border-radius: 5px;
+  border-color: gray;
 }
 
 .movies{
@@ -188,7 +182,7 @@ img{
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
-  color: black;
+  color: white;
 }
 
 .thumbnail-movies{
@@ -197,9 +191,12 @@ img{
   top: 1350px;
   padding-right: 44px;
   padding-left: 15px;
+  color: white;
 }
 
 .thumbnail-movies img{
   width: 80%;
   height: auto;
+  border-radius: 5px;
+  border-color: gray;
 }
