@@ -16,6 +16,8 @@ import Header from './component/header';
 import Login from './pages/loginmodul';
 import Regis from './pages/regismodul';
 import Person from './pages/person';
+import Premium from './pages/premium';
+import DetailSeries from './pages/detilfilm';
 import Test from './tes';
 
 
@@ -23,8 +25,7 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <Person/>
-          {/* <Router>
+          <Router>
            <Header/>
               <Switch>
                 <Route path="/Series">
@@ -43,11 +44,25 @@ class App extends Component {
                   <Regis/>  
                 </Route>/>
 
+                <Route path="/Personal">
+                  <Person/>
+                </Route>
+
+                <Route path="/Plan">
+                  <Premium/>
+                </Route>
+
+                <Route path="/Detil">
+                  <DetailSeries/>
+                </Route>
+
                 <Route path="/">
                   <Home />
                 </Route>
+
               </Switch>
-          </Router> */}
+          </Router>
+
       </div>
     )
   }

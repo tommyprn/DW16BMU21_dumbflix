@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import './movie.css';
 import MovieData from '../Data/datamovie.json';
+import {
+  Link
+} from "react-router-dom";
 
 class Movie extends Component {
     render(){
@@ -35,12 +38,12 @@ class Movie extends Component {
                 <div class="row justify-content-between">
                     {MovieData.map((movieDetail, i)=>{
                     return(   
-                        <div class="row-2">
+                      <Link to="/Detil"><div class="row-2">
                             <img className="timbul" src={movieDetail.image}/>
                             <p></p>                           
                             <p>{movieDetail.name}</p>
                             <p className="movie-year">{movieDetail.year}</p>          
-                        </div>
+                        </div></Link>
                     )
                     })}    
                 </div> 

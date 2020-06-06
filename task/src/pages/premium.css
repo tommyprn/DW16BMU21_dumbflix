@@ -1,0 +1,53 @@
+.premi{
+    color: white;
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+.up-plan{
+    display: inline-block;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.call-friend, .pemanis{
+    color: red;
+}
+
+.nomornya{
+    color: white;
+}
+
+.bukti-trf {
+    border-radius: 5px;
+    background-color: white;
+    padding: 6px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    color: red;
+    width: 400px;
+    border: solid gray;
+}
+
+.nomor-id{
+    width: 400px;
+    margin-left: 60px;
+}
+
+.kirim{
+    width: 400px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 80px;
+    background-color: red;
+    color: white;
+    height: 60px;
+}
+
+

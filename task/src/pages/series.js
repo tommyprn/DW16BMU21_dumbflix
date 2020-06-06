@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import './series.css';
 import SeriesData from '../Data/dataseries.json';
+import {
+    Link
+} from "react-router-dom";
 
 class Series extends Component {
     render(){
@@ -34,12 +37,12 @@ class Series extends Component {
                 <div class="row justify-content-between">
                     {SeriesData.map((seriesDetail, i)=>{
                     return(   
-                        <div class="row-2">
+                        <Link to="/Detil"><div class="row-2">
                             <img className="timbul" src={seriesDetail.image}/>
                             <p></p>                           
                             <p>{seriesDetail.name}</p>
                             <p className="series-year">{seriesDetail.year}</p>          
-                        </div>
+                        </div></Link>
                     )
                     })}    
                 </div> 

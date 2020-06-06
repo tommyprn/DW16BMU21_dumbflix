@@ -8,11 +8,18 @@ import Register from '../pages/regismodul';
 import Login from '../pages/loginmodul';
 import App from '../App.js';
 
+// function LoginUser(props){
+//     const history = useHistory();
+//     function tester(){
+//         let path = 'headlog';
+//         history.push(path);
+//     }
+
 class Header extends Component {
     render(){
         return (
             <div className="header">
-        
+                
                 <div className="header-left">
                 
                     <Link to="/"><p>Home</p></Link>
@@ -33,4 +40,5 @@ class Header extends Component {
         )
     }   
 }
+// }
 export default Header;
