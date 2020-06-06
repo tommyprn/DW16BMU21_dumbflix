@@ -1,0 +1,31 @@
+.latest{
+    color: white;
+  }
+  
+  .navmovies{
+    position: absolute;
+    left: 34px;
+    top: 1250px;
+    font-family: Product Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  .thumbnail-movies{
+    position: absolute;
+    left: 54px;
+    top: 1350px;
+    padding-right: 44px;
+    padding-left: 15px;
+  }
+  
+  .thumbnail-movies img{
+    width: 80%;
+    height: auto;
+  }
+  
+  .timbul{
+    border-radius: 5px;
+    border: solid gray;
+  }

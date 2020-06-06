@@ -15,77 +15,23 @@ a{
     height: auto;
   }
 
-  .header{
-    background: #000;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 70px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);;
-  }
-  
-  .header-right img{
-    width: 50px;
-    height: 50px;
-  }
-  
-  .header-left{
-    font-family: Product Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .header-middle{
-    display: flex;
-  }
-  
-  .header-right{
-    display: flex;
-    padding-right:25px;
-  }
-  
-  .regis{
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    border-color: white;
-    background-color: white;
-    border: none;
-    color:#E50914;
-    font-family: Product Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 17px;
-  }
-  
-  .login{
-    width: 100px;
-    height: 30px;
-    margin-left: 15px;
-    border-radius: 5px;
-    border-color: #E50914;
-    background-color: #E50914;
-    border: none;
-    color: white;
-    font-family: Product Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 17px;
-  }
-
-  .jumbo{
+  .jumbo-series{
     position: relative;
     opacity: 0.6;
   }
   
-  .judul{
+  .rectangle-series{
+    position: absolute;
+    width: 2000px;
+    height: 300px;
+    left: -200px;
+    top: 670px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) -92.86%, #000000 60.83%);
+    background-blend-mode: hard-light;
+    filter: blur(50px);
+  }
+
+  .judul-series{
     position: absolute;
     left: 150px;
     top: 230px;
@@ -93,7 +39,7 @@ a{
     width: 400px; 
   }
 
-  .summary{
+  .summary-series{
     position: absolute;
     width: 550px;
     height: 130px;
@@ -110,7 +56,7 @@ a{
     text-align: justify;
   }
 
-  .kategori{
+  .kategori-series{
     position: absolute;
     left: 150px;
     top:470px;
@@ -123,7 +69,7 @@ a{
     text-shadow: 2px 2px 5px black;
   }
   
-  .kate{
+  .kate-series{
     border: 1.5px solid ;
     border-radius: 5px;
     padding-left: 8px;
@@ -134,7 +80,7 @@ a{
     border-color: rgb(51, 51, 51);
   }
   
-  .watch{
+  .watch-series{
     position: absolute;
     width: 300px;
     height: 60px;
@@ -155,7 +101,7 @@ a{
     color: white;
   }
 
-  .series{
+  .navseries{
     position: absolute;
     left: 34px;
     top: 900px;
@@ -163,81 +109,28 @@ a{
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
+    color: white;
   }
   
-  .thumbnail-series{
+  .thumbnail-series-page{
     position: absolute;
     left: 54px;
     top: 980px;
     padding-right: 44px;
     padding-left: 15px;
+    color: white;
   }
   
-  .thumbnail-movies img{
+  .thumbnail-series-page img{
     width: 80%;
     height: auto;
   }
   
-  .thumbnail-movies-2{
-    position: absolute;
-    left: 54px;
-    top: 1350px;
-    padding-right: 44px;
-    padding-left: 15px;
-  }
-
-  .thumbnail-movies-2 img{
-    width: 80%;
-    height: auto;
+  .series-year{
+    padding-bottom: 20px;
   }
 
   .timbul{
     border-radius: 5px;
-    border: solid gray;
-  }
-  
-  .modaldasar{
-    background-color: black;
-    border-radius: 5px;
-  }
-  
-  .judulmodal{
-    color: white;
-    margin-bottom: 30px;
-  }
-  
-  .email{
-    padding-top:10px;
-  }
-  
-  .pass{
-    padding-top: 10px;
-    padding-bottom: 30px;
-  }
-  
-  .tombollogin{
-    border-radius: 5px;
-    border-color: white;
-    background-color: #E50914;
-    border: none;
-    color:white;
-    font-family: Product Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 17px;
-    width: 266px;
-    height: 40px;
-  }
-  
-  .tombol-baru{
-    padding-top: 20px;
-    text-align: center;
-    color:white;
-    font-family: Product Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 10px;
-    width: 266px;
-    height: 40px;
+    border: solid white;
   }

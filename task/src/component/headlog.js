@@ -1,6 +1,6 @@
 import React, {useState, Component} from 'react';
 import logo from '../logo.png';
-import '../App.css';
+import './header.css';
 import {Image, Col} from 'react-bootstrap';
 import {Nav,Modal, ModalBody, ModalFooter, Button} from 'react-bootstrap';
 

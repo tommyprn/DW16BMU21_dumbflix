@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import '../App.css';
+import './mov.css';
 import {Nav} from 'react-bootstrap';
 
 class Mov extends Component{
     render(){    
         return(
             <div className="latest">
-                <Nav.Link href="" className="movies">Movies</Nav.Link>
+                <Nav.Link href="" className="navmovies">Movies</Nav.Link>
 
                 <div className="thumbnail-movies">
                     <div class="row justify-content-between">

@@ -14,12 +14,12 @@ a{
     max-width: 100%;
     height: auto;
   }
-
-  .jumbo-movie{
+  
+  .jumbo-home{
     position: relative;
   }
-
-  .rectangle-movie{
+  
+  .rectangle{
     position: absolute;
     width: 2000px;
     height: 300px;
@@ -29,21 +29,23 @@ a{
     background-blend-mode: hard-light;
     filter: blur(50px);
   }
-  
-  .judul-movie{
+
+  .judul-home{
     position: absolute;
     left: 150px;
-    top: 100px;
+    top: 150px;
     height: auto; 
-    width: 400px; 
+    width: auto; 
+    max-width: 515px; 
+    max-height: 100px;
   }
-
-  .summary-movie{
+  
+  .summary-home{
     position: absolute;
     width: 550px;
-    height: 130px;
+    height: 80px;
     left: 150px;
-    top:375px;
+    top:420px;
     border: none;
     font-family: Product Sans;
     font-style: normal;
@@ -52,13 +54,12 @@ a{
     background-color: transparent;
     color: white;
     text-shadow: 2px 2px 5px black;
-    text-align: justify;
   }
-
-  .kategori-movie{
+  
+  .kategori-home{
     position: absolute;
     left: 150px;
-    top:525px;
+    top:510px;
     width: 150px;
     display: flex;
     flex-direction: row;
@@ -68,7 +69,7 @@ a{
     text-shadow: 2px 2px 5px black;
   }
   
-  .kate-movie{
+  .kate-home{
     border: 1.5px solid ;
     border-radius: 5px;
     padding-left: 8px;
@@ -79,12 +80,12 @@ a{
     border-color: rgb(51, 51, 51);
   }
   
-  .watch-movie{
+  .watch-home{
     position: absolute;
     width: 300px;
     height: 60px;
     left: 150px;
-    top: 600px;
+    top: 590px;
     background-color: #E50914;
     color: white;
     border-radius: 5px;
@@ -96,45 +97,78 @@ a{
     line-height: 150.2%;
   }
 
-  .latest{
-    color: white;
-  }
-
-  .navmovies{
+  .home-movies{
     position: absolute;
     left: 34px;
-    top: 850px;
+    top: 1350px;
     font-family: Product Sans;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
-    color: white;
   }
   
-  .thumbnail-movies-page{
+  .thumbnail-movies-home{
     position: absolute;
     left: 54px;
-    top: 950px;
-    padding-right: 30px;
-    padding-left: 10px;
+    top: 1430px;
+    padding-right: 44px;
+    padding-left: 15px;
     color: white;
   }
   
-  .thumbnail-movies-page img{
+  .thumbnail-movies-home img{
     width: 80%;
     height: auto;
   }
-
+  
   .timbul{
     border-radius: 5px;
-    border: solid white;
+    border: solid gray;
   }
 
-  .movie-year{
-    padding-bottom: 20px;
+  .home-series{
+    position: absolute;
+    left: 34px;
+    top: 800px;
+    font-family: Product Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
   }
   
-
+  .thumbnail-series-home{
+    position: absolute;
+    left: 54px;
+    top: 900px;
+    padding-right: 44px;
+    padding-left: 15px;
+    color: white;
+  }
   
+  .thumbnail-series-home img{
+    width: 80%;
+    height: auto;
+  }
   
- 
+  .home-movies{
+    position: absolute;
+    left: 34px;
+    top: 1280px;
+    font-family: Product Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  .thumbnail-movies-home{
+    position: absolute;
+    left: 54px;
+    top: 1380px;
+    padding-right: 44px;
+    padding-left: 15px;
+  }
+  
+  .thumbnail-movies-home img{
+    width: 80%;
+    height: auto;
+  }

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../App.css';
+import './seri.css';
 import {Nav} from 'react-bootstrap';
 
 
