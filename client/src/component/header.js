@@ -1,29 +1,47 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import logo from "../logo.png";
 import "./header.css";
 import { Link } from "react-router-dom";
 import LoginModul from "../pages/loginmodul";
 import RegisModul from "../pages/regismodul";
+import { connect } from "react-redux";
+import { getUser, logout } from "../redux/actions/user";
 import { Dropdown, DropdownButton, Image } from "react-bootstrap";
 
-function AdminButton(props) {
-  return (
-    <div className="header-right">
-      <DropdownButton
-        alignRight
-        title={
-          <Image
-            src={
-              "https://apollo-singapore.akamaized.net/v1/files/lrtdeeoj2jtl1-ID/image"
-            }
-            roundedCircle
-            className="foto-profile"
-          />
-        }
-        id="dropdown-menu"
-        variant="black"
-        className="drop-button"
-      >
+class User extends Component {
+  render() {
+    return (
+      <div>
+        <Link to="/profile">
+          <li className="profile-dropdown-list">
+            <i class="fas fa-user" style={{ margin: "10px", color: "red" }}></i>
+            profile
+          </li>
+        </Link>
+        <Link to="/plan">
+          <li className="profile-dropdown-list">
+            <i
+              class="fas fa-donate"
+              style={{ margin: "10px", color: "red" }}
+            ></i>
+            Upgrade Plan
+          </li>
+        </Link>
+      </div>
+    );
+  }
+}
+
+class Admin extends Component {
+  render() {
+    return (
+      <div>
+        <Link to="/films">
+          <li className="profile-dropdown-list">
+            <i class="fas fa-tv" style={{ margin: "10px", color: "red" }}></i>
+            Film
+          </li>
+        </Link>
         <Link to="/transaction">
           <li className="profile-dropdown-list">
             <i
@@ -33,96 +51,76 @@ function AdminButton(props) {
             Transaction
           </li>
         </Link>
-        <Link to="/films">
-          <li className="profile-dropdown-list">
-            <i class="fa fa-film" style={{ margin: "10px", color: "red" }}></i>
-            Film
-          </li>
-        </Link>
-        <Dropdown.Divider />
-        <button onClick={props.handleLogoutClick} className="Logout">
-          <li className="profile-dropdown-list">
-            <i
-              class="fas fa-times"
-              style={{ margin: "10px", color: "red" }}
-            ></i>
-            Logout
-          </li>
-        </button>
-      </DropdownButton>
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
-function UserButton(props) {
-  return (
-    <div className="header-right">
-      <DropdownButton
-        alignRight
-        title={
-          <Image
-            src={
-              "https://img.favpng.com/7/7/17/portrait-drawing-visual-arts-painting-png-favpng-9sxWdF91pWRzCKrTnzgHHrpET_t.jpg"
-            }
-            roundedCircle
-            className="foto-profile"
-          />
-        }
-        id="dropdown-menu"
-        variant="black"
-        className="drop-button"
-      >
-        <Link to="/profile">
-          <li className="profile-dropdown-list">
-            <i
-              class="far fa-address-card"
-              style={{ margin: "10px", color: "red" }}
+class UserButton extends Component {
+  render() {
+    return (
+      <div className="header-right">
+        <DropdownButton
+          alignRight
+          title={
+            <Image
+              src={
+                "https://img.favpng.com/7/7/17/portrait-drawing-visual-arts-painting-png-favpng-9sxWdF91pWRzCKrTnzgHHrpET_t.jpg"
+              }
+              roundedCircle
+              className="foto-profile"
             />
-            Profile
-          </li>
-        </Link>
-        <Link to="/plan">
-          <li className="profile-dropdown-list">
-            <i
-              class="fas fa-donate"
-              style={{ margin: "10px", color: "red" }}
-            ></i>
-            Pay
-          </li>
-        </Link>
-        <Dropdown.Divider />
-        <button onClick={props.handleLogoutClick} className="Logout">
-          <li className="profile-dropdown-list">
-            <i
-              class="fas fa-times"
-              style={{ margin: "10px", color: "red" }}
-            ></i>
-            Logout
-          </li>
-        </button>
-      </DropdownButton>
-    </div>
-  );
+          }
+          id="dropdown-menu"
+          variant="black"
+          className="drop-button"
+        >
+          {this.props.role === 1 ? <Admin /> : <User />}
+
+          <Dropdown.Divider />
+          <Link to="/">
+            <button className="Logout" onClick={this.props.logout}>
+              <li className="profile-dropdown-list">
+                <i
+                  class="fas fa-times"
+                  style={{ margin: "15px", color: "red" }}
+                ></i>
+                Logout
+              </li>
+            </button>
+          </Link>
+        </DropdownButton>
+      </div>
+    );
+  }
 }
 
-function AuthButton(props) {
-  return (
-    <div className="header-right">
-      <button onClick={() => props.handleToggleModal(true)} className="regis">
-        Register
-      </button>
+class AuthButton extends Component {
+  render() {
+    return (
+      <div className="header-right">
+        <button
+          onClick={() => this.props.handleToggleModal(true)}
+          className="register"
+        >
+          Register
+        </button>
 
-      <button onClick={() => props.handleToggleModal(false)} className="login">
-        Login
-      </button>
-    </div>
-  );
+        <button
+          onClick={() => this.props.handleToggleModal(false)}
+          className="login"
+        >
+          Login
+        </button>
+      </div>
+    );
+  }
 }
 
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = { isModalOpen: false, isRegis: false, isLoggedIn: false };
+    this.state = { isModalOpen: false, isRegis: false };
   }
 
   handleToggleModal = (isRegis = false) => {
@@ -133,18 +131,11 @@ class Header extends Component {
     });
   };
 
-  handleLoginClick = () => {
-    this.setState({ isLoggedIn: true });
+  handleCloseModal = () => {
+    this.setState({ isModalOpen: false });
   };
-
-  handleLogoutClick = () => {
-    this.setState({ isLoggedIn: false });
-  };
-
   render() {
-    const isLoggedIn = this.state.isLoggedIn;
-    const a = localStorage.getItem("role");
-
+    const { data } = this.props.user;
     return (
       <>
         <div className="header">
@@ -162,10 +153,8 @@ class Header extends Component {
           <div className="header-middle">
             <img src={logo} alt="Logo" />
           </div>
-          {isLoggedIn ? (
-            <UserButton handleLogoutClick={this.handleLogoutClick} />
-          ) : a === 1 ? (
-            <AdminButton handleLogoutClick={this.handleLogoutClick} />
+          {this.props.isLogin ? (
+            <UserButton logout={this.props.logout} role={data.role} />
           ) : (
             <AuthButton handleToggleModal={this.handleToggleModal} />
           )}
@@ -177,12 +166,13 @@ class Header extends Component {
               <RegisModul
                 show={this.state.isModalOpen}
                 onHide={() => this.handleToggleModal(true)}
+                close={this.handleCloseModal}
               />
             ) : (
               <LoginModul
                 show={this.state.isModalOpen}
                 onHide={this.handleToggleModal}
-                handleLoginClick={this.handleLoginClick}
+                close={this.handleCloseModal}
               />
             )}
           </>
@@ -191,5 +181,11 @@ class Header extends Component {
     );
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    user: state.user,
+    isLogin: state.user.isLogin,
+  };
+};
 
-export default Header;
+export default connect(mapStateToProps, { getUser, logout })(Header);

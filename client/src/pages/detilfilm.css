@@ -1,75 +1,93 @@
-.video-detil{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.video-detil {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.video-preview{
-    display: flex;
-    margin: auto;
-    background-color: gray;
+.video-preview {
+  display: flex;
+  margin: auto;
+  background-color: gray;
 }
 
-.detail-warper{
-    margin-top: 70px;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    color: white;
+.detail-warper {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  color: white;
 }
 
-.judul-preview{
-    position: absolute;
-    margin-left: 30px;
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
+.judul-preview {
+  position: absolute;
+  margin-left: 30px;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
 }
 
-.gambar-preview{
-    margin-left:40px ;
-    width: 200px;
-    border-radius: 5px;
+.gambar-preview {
+  margin-left: 40px;
+  width: 200px;
+  border-radius: 5px;
+  height: 300px;
 }
 
-.tahun-preview{
-    position: absolute;
-    top: 60px;
-    left: 275px;
+.tahun-preview {
+  position: absolute;
+  top: 60px;
+  left: 275px;
 }
 
-.genre-preview{
-    position: absolute;
-    top: 60px;
-    left: 350px;
-    border: solid white;
-    border-radius: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
+.genre-preview {
+  position: absolute;
+  top: 60px;
+  left: 350px;
+  border: solid white;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-.sinposis-preview{
-    width: 350px;
-    position: absolute;
-    top: 120px;
-    left: 275px;
-    text-align: justify;
+.sinposis-preview {
+  width: 350px;
+  position: absolute;
+  top: 120px;
+  left: 275px;
+  text-align: justify;
 }
 
-.next-episode{
-    position: absolute;
-    top: -30px;
-    right: 50px;
+.episode-preview {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10px;
+  right: 50px;
 }
 
-.new-episode{
-    position: absolute;
-    top: 270px;
-    right: 320px;
-    background-color: red;
-    border-radius: 5px;
-    border: none;
-    height: 40px;
-    color: white;
+.next-episode {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 106%;
+  position: absolute;
+  top: 150px;
+  margin-left: -12px;
 }
 
+.button-next-episode {
+  border: none;
+  background-color: transparent;
+}
+
+.new-episode {
+  background-color: red;
+  border-radius: 5px;
+  border: none;
+  height: 35px;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 14px;
+  margin-left: -20px;
+}

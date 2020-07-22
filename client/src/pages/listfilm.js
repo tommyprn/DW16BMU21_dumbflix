@@ -1,11 +1,37 @@
 import React, { Component } from "react";
 import "./listfilm.css";
-import SeriesData from "../Data/dataseries.json";
 import { Link } from "react-router-dom";
 import { SplitButton, Dropdown } from "react-bootstrap";
+import { connect } from "react-redux";
+import { getAllFilm } from "../redux/actions/film";
 
 class List extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      category: 1,
+    };
+  }
+
+  handleMovie = () => {
+    this.setState({
+      category: 1,
+    });
+  };
+
+  handleTv = () => {
+    this.setState({
+      category: 2,
+    });
+  };
+
+  componentDidMount() {
+    this.props.getAllFilm();
+  }
+
   render() {
+    const { data: dataMovies } = this.props.film;
+    let a = Object.values(dataMovies);
     return (
       <div>
         <p className="judul-halaman">List Film</p>
@@ -17,20 +43,19 @@ class List extends Component {
           variant="dark"
           className="category-drop"
         >
-          <Dropdown.Item eventKey="1" className="text-dark">
-            Action
+          <Dropdown.Item
+            eventKey="1"
+            className="text-dark"
+            onClick={this.handleMovie}
+          >
+            Movies
           </Dropdown.Item>
-          <Dropdown.Item eventKey="2" className="text-dark">
-            Drama
-          </Dropdown.Item>
-          <Dropdown.Item eventKey="3" className="text-dark">
-            Comedy
-          </Dropdown.Item>
-          <Dropdown.Item eventKey="4" className="text-dark">
-            Romance
-          </Dropdown.Item>
-          <Dropdown.Item eventKey="5" className="text-dark">
-            Sci-fi
+          <Dropdown.Item
+            eventKey="2"
+            className="text-dark"
+            onClick={this.handleTv}
+          >
+            TV Series
           </Dropdown.Item>
         </SplitButton>
 
@@ -38,18 +63,26 @@ class List extends Component {
           <button className="nambah-film">Add Film</button>
         </Link>
 
-        <div className="thumbnail-series-list">
-          <div class="row justify-content-between">
-            {SeriesData.map((seriesDetail, i) => {
-              return (
-                <div class="row-2">
-                  <img className="list-timbul" src={seriesDetail.image} />
-                  <p></p>
-                  <p>{seriesDetail.name}</p>
-                  <p className="list-series-year">{seriesDetail.year}</p>
-                </div>
-              );
-            })}
+        <div className="thumbnail-list-film">
+          <div className="row justify-content-start">
+            {a
+              .filter((film) => film.categoryId === this.state.category)
+              .map((moviesfilm) => {
+                return (
+                  <Link to="/detail" key={moviesfilm.id}>
+                    <div>
+                      <img
+                        className="timbul"
+                        src={moviesfilm.thumbnail}
+                        alt="Movie thumbnail"
+                      />
+                      <p></p>
+                      <p>{moviesfilm.title}</p>
+                      <p className="movie-year">{moviesfilm.year}</p>
+                    </div>
+                  </Link>
+                );
+              })}
           </div>
         </div>
       </div>
@@ -57,4 +90,10 @@ class List extends Component {
   }
 }
 
-export default List;
+const mapStateToProps = (state) => {
+  return {
+    film: state.film,
+  };
+};
+
+export default connect(mapStateToProps, { getAllFilm })(List);

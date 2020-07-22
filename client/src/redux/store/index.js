@@ -7,7 +7,7 @@ import promise from "redux-promise-middleware";
 
 // Global state
 const reducers = combineReducers({
-  auth: authReducer,
+  user: authReducer,
   film: filmReducer,
   episode: episodeReducer,
   transaction: transactionReducer,

@@ -18,13 +18,14 @@
 
 .data-diri {
   color: white;
-  font-size: 12px;
+  font-size: 14px;
+  font-family: sans-serif;
 }
 
 .keterangan {
   font-size: 12px;
   margin-top: -20px;
-  color: black;
+  color: red;
   margin-bottom: 15px;
 }
 

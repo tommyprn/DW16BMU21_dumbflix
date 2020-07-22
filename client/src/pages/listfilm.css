@@ -1,50 +1,47 @@
-.thumbnail-series-list{
-    position: absolute;
-    left: 54px;
-    top: 240px;
-    padding-right: 44px;
-    padding-left: 15px;
-    color: white;
-  }
-  
-  .thumbnail-series-list img{
-    width: 80%;
-    height: auto;
-  }
-  
-  .list-series-year{
-    padding-bottom: 30px;
-  }
+.thumbnail-list-film {
+  position: absolute;
+  left: 54px;
+  top: 220px;
+  padding-right: 30px;
+  padding-left: 10px;
+  color: white;
+}
 
-  .list-timbul{
-    border-radius: 5px;
-    border: solid white;
-  }
+.thumbnail-movies-page img {
+  width: 80%;
+  height: auto;
+}
 
-  .judul-halaman{
-      color: white;
-      font-size: 40px;
-      position: absolute;
-      top: 110px;
-      left: 60px;
-  }
+.timbul {
+  border-radius: 5px;
+  border: solid white;
+  margin-right: 7px;
+}
 
-  .category-drop{
-    position: absolute;
-    top: 50px;
-    left: 260px;
-  }
+.judul-halaman {
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 110px;
+  left: 60px;
+}
 
-  .nambah-film{
-    position: absolute;
-    width: 200px;
-    height: 30px;
-    right: 150px;
-    top: 120px;
-    background-color: #E50914;
-    color: white;
-    border-radius: 5px;
-    border: none;
-    font-weight: bold;
-    font-size: 16px;
-  }
+.category-drop {
+  position: absolute;
+  top: 50px;
+  left: 260px;
+}
+
+.nambah-film {
+  position: absolute;
+  width: 200px;
+  height: 30px;
+  right: 150px;
+  top: 120px;
+  background-color: #e50914;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+}

@@ -8,8 +8,7 @@ import { Modal, Form } from "react-bootstrap";
 class Register extends Component {
   constructor(props) {
     super(props);
-
-    this.state = { data: { gender: "male" } };
+    this.state = { data: { gender: "male" }, error: {} };
   }
 
   handleChange = (event) => {
@@ -18,6 +17,7 @@ class Register extends Component {
       data: { ...data, [event.target.name]: event.target.value },
     });
   };
+
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.register(this.state.data);
@@ -25,8 +25,11 @@ class Register extends Component {
   };
 
   render() {
-    const { data: dataUser, loading, error } = this.props.auth;
+    const { error } = this.props.user;
     const { data } = this.state;
+    if (this.props.isLogin) {
+      this.setState(this.props.close);
+    }
     return (
       <Modal size="sm" show={this.props.show} onHide={this.props.onHide}>
         <Modal.Body className="modaldasar">
@@ -96,7 +99,7 @@ class Register extends Component {
                 onChange={this.handleChange}
               />
             </Form.Group>
-
+            {error ? <p className="error-message">{error.message}</p> : <p></p>}
             <button type="submit" className="tombollogin">
               Register
             </button>
@@ -115,7 +118,9 @@ class Register extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    auth: state.auth,
+    user: state.user,
+    isLogin: state.user.isLogin,
+    error: state.user.error,
   };
 };
 

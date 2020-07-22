@@ -53,10 +53,10 @@ class Series extends Component {
           <div className="row justify-content-start">
             {a
               .slice(0, 24)
-              .filter((film) => film.categoryId == 2)
-              .map((tvseries) => {
+              .filter((film) => film.categoryId === 2)
+              .map((tvseries, i) => {
                 return (
-                  <Link to="/detail" key={tvseries.id}>
+                  <Link to={`/detail/${tvseries.id}`} key={i} key={tvseries.id}>
                     <div>
                       <img
                         className="timbul"

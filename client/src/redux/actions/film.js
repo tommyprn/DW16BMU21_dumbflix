@@ -3,14 +3,14 @@ import {
   POST_FILM,
   GET_FILM_DETAIL,
 } from "../../constants/action-types";
-import { API } from "../../config/api";
+import { API, setAuthToken } from "../../config/api";
 
 export const getAllFilm = () => {
   return {
     type: GET_ALL_FILM,
     payload: async () => {
       try {
-        const response = await API.get("/films");
+        const response = await API.get("/film");
 
         return response.data.data;
       } catch (error) {
@@ -29,9 +29,10 @@ export const addFilm = (id) => {
     type: POST_FILM,
     payload: async () => {
       try {
+        setAuthToken(localStorage.getItem("token"));
         const {
           data: { data },
-        } = await API.post("/films", id);
+        } = await API.post("/film", id);
 
         return data;
       } catch (error) {
@@ -50,9 +51,10 @@ export const getFilmDetail = (filmId) => {
     type: GET_FILM_DETAIL,
     payload: async () => {
       try {
+        setAuthToken(localStorage.getItem("token"));
         const {
           data: { data },
-        } = await API.get("/film/" + filmId + "/episodes");
+        } = await API.get(`/film/${filmId}/episode`);
 
         return data;
       } catch (error) {

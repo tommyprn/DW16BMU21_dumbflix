@@ -2,14 +2,13 @@ import React, { Component } from "react";
 import "./loginmodul.css";
 import { connect } from "react-redux";
 import { login } from "../redux/actions/user";
-import { Link } from "react-router-dom";
 import { Modal, Form } from "react-bootstrap";
 
-class Login extends React.Component {
+class Login extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { data: {} };
+    this.state = { data: {}, error: {} };
   }
 
   handleChange = (event) => {
@@ -26,7 +25,11 @@ class Login extends React.Component {
   };
 
   render() {
+    const { error } = this.props.user;
     const { data } = this.state;
+    if (this.props.isLogin) {
+      this.setState(this.props.close);
+    }
     return (
       <Modal size="sm" show={this.props.show} onHide={this.props.onHide}>
         <Modal.Body className="modaldasar">
@@ -53,18 +56,11 @@ class Login extends React.Component {
                 onChange={this.handleChange}
               />
             </Form.Group>
-
-            <button
-              className="tombollogin"
-              onClick={this.props.handleLoginClick}
-            >
-              Login
-            </button>
+            {error ? <p className="error-message">{error.message}</p> : <p></p>}
+            <button className="tombollogin">Login</button>
             <p className="kalimat-baru">
               New on Dumbflix?
-              <Link to="/register" className="redirect-regis">
-                <span>Click Here</span>
-              </Link>
+              <button className="redirect-regis">Click Here</button>
             </p>
           </Form>
         </Modal.Body>
@@ -75,7 +71,9 @@ class Login extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    auth: state.auth,
+    user: state.user,
+    isLogin: state.user.isLogin,
+    error: state.user.error,
   };
 };
 

@@ -4,19 +4,36 @@ import { connect } from "react-redux";
 import { getAllFilm } from "../redux/actions/film";
 import { Link } from "react-router-dom";
 
+// class Child extends Component {
+//   render() {
+//     return (
+//       <>
+//         <FilmDetail filmId={this.props.handleFilmId} />
+//       </>
+//     );
+//   }
+// }
+
+// export const Child = () => <FilmDetail filmId={this.handleFilmId} />;
+
 class Home extends Component {
   componentDidMount() {
     this.props.getAllFilm();
   }
 
+  // handleFilmId(value) {
+  //   let val = value;
+  // }
+
   render() {
     const { data: dataHome } = this.props.film;
     let a = Object.values(dataHome);
+
     return (
       <div className="homes">
         <div className="jumbo-home">
           <img
-            src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/101701370_3056727111033322_8855875788692520960_o.jpg?_nc_cat=108&_nc_sid=730e14&_nc_eui2=AeHxTYZZG0eZeG4uKpPet90KR6zylArG8vdHrPKUCsby9w2jdE8sYuI63Z9zK_UO8mFqfDTfC2BvlgsArRmg5MUh&_nc_ohc=5z1HmtZedf0AX8rDd2h&_nc_ht=scontent-sin6-2.xx&oh=4db110d5f59deb98c0c3bc05cd363e24&oe=5EFE084B"
+            src="https://www.ubackground.com/_ph/19/437655551.jpg"
             alt="jumbotron"
           />
         </div>
@@ -40,9 +57,7 @@ class Home extends Component {
           <p className="kate-home">TV Series</p>
         </div>
 
-        <Link to="Detil">
-          <button className="watch-home">WATCH NOW !</button>
-        </Link>
+        <button className="watch-home">WATCH NOW !</button>
 
         <Link to="/Series" className="home-series">
           TV Series
@@ -51,17 +66,18 @@ class Home extends Component {
         <div className="thumbnail-series-home">
           <div className="row justify-content-start">
             {a
-              .slice(0, 12)
-              .filter((film) => film.categoryId == 2)
-              .map((tvseries) => {
+              .slice(0, 6)
+              .filter((film) => film.categoryId === 2)
+              .map((tvseries, i) => {
                 return (
-                  <Link to="/detail" key={tvseries.id}>
+                  <Link to={`/detail/${tvseries.id}`} key={i}>
                     <div>
                       <img
                         className="timbul"
                         src={tvseries.thumbnail}
                         alt="TV Series thumbnail"
                       />
+
                       <p></p>
                       <p>{tvseries.title}</p>
                       <p className="series-year">{tvseries.year}</p>
@@ -79,11 +95,11 @@ class Home extends Component {
         <div className="thumbnail-movies-home">
           <div className="row justify-content-start">
             {a
-              .slice(0, 12)
-              .filter((film) => film.categoryId == 1)
-              .map((moviesfilm) => {
+              .slice(0, 18)
+              .filter((film) => film.categoryId === 1)
+              .map((moviesfilm, i) => {
                 return (
-                  <Link to="/detail" key={moviesfilm.id}>
+                  <Link to={`/detail/${moviesfilm.id}`} key={i}>
                     <div>
                       <img
                         className="timbul"

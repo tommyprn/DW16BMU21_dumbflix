@@ -17,12 +17,12 @@ class AddEpisode extends Component {
   };
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.postEpisode(this.state.data);
+    this.props.postEpisode(this.state.data, this.props.match.params.filmId);
     this.setState({ data: {} });
   };
 
   render() {
-    const { data: dataEpisode, loading, error } = this.props.episode;
+    //const { data: dataEpisode, loading, error } = this.props.episode;
     const { data } = this.state;
 
     return (
@@ -41,8 +41,8 @@ class AddEpisode extends Component {
 
         <div>
           <input
-            name="thumbnail"
-            value={data.thumbnail ? data.thumbnail : ""}
+            name="thumbnailEp"
+            value={data.thumbnailEp ? data.thumbnailEp : ""}
             type="text"
             className="custom-input"
             placeholder="Thumbnail URL"

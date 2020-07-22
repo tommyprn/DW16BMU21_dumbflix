@@ -8,7 +8,7 @@ import Login from "./pages/loginmodul";
 import Regis from "./pages/regismodul";
 import Person from "./pages/person";
 import Premium from "./pages/premium";
-import DetailSeries from "./pages/detilfilm";
+import DetailFilm from "./pages/detilfilm";
 import Transaction from "./pages/transaksi";
 import AddFilm from "./pages/addfilmform";
 import AddEpisode from "./pages/addepisode";
@@ -46,9 +46,7 @@ class App extends Component {
               <Premium />
             </Route>
 
-            <Route exact path="/detail">
-              <DetailSeries />
-            </Route>
+            <Route exact path="/detail/:filmId" component={DetailFilm} />
 
             <Route exact path="/transaction">
               <Transaction />
@@ -58,9 +56,7 @@ class App extends Component {
               <AddFilm />
             </Route>
 
-            <Route exact path="/post-episode">
-              <AddEpisode />
-            </Route>
+            <Route exact path="/post-episode/:filmId" component={AddEpisode} />
 
             <Route exact path="/films">
               <List />

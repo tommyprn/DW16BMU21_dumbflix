@@ -1,4 +1,10 @@
-import { LOGIN, REGISTER, GET_USER } from "../../constants/action-types";
+import {
+  REGISTER,
+  LOGIN,
+  GET_USER,
+  LOGOUT,
+  GET_ALL_USER,
+} from "../../constants/action-types";
 import { API, setAuthToken } from "../../config/api";
 
 export const login = (user) => {
@@ -17,10 +23,6 @@ export const login = (user) => {
         const {
           data: { data: dataUser },
         } = await API.get("/user/" + ids);
-
-        localStorage.setItem("role", dataUser.role);
-        localStorage.setItem("id", dataUser.id);
-
         return dataUser;
       } catch (error) {
         if (error.response) {
@@ -30,6 +32,16 @@ export const login = (user) => {
         }
       }
     },
+  };
+};
+
+export const logout = () => {
+  localStorage.removeItem("role");
+  localStorage.removeItem("id");
+  localStorage.removeItem("token");
+
+  return {
+    type: LOGOUT,
   };
 };
 
@@ -62,9 +74,31 @@ export const getUser = (id) => {
     type: GET_USER,
     payload: async () => {
       try {
+        setAuthToken(localStorage.getItem("token"));
         const {
           data: { data },
         } = await API.get("/user/" + id);
+        return data;
+      } catch (error) {
+        if (error.response) {
+          const { data, status } = error.response;
+
+          if (status > 399) throw data.error;
+        }
+      }
+    },
+  };
+};
+
+export const getAllUser = () => {
+  return {
+    type: GET_ALL_USER,
+    payload: async () => {
+      try {
+        setAuthToken(localStorage.getItem("token"));
+        const {
+          data: { data },
+        } = await API.get("/user");
 
         return data;
       } catch (error) {

@@ -20,12 +20,14 @@ class AddFilm extends Component {
       data: { ...data, [event.target.name]: event.target.value },
     });
   };
+
   handleChangeEpisode = (event) => {
     const { dataEpisode } = this.state;
     this.setState({
       data: { ...dataEpisode, [event.target.name]: event.target.value },
     });
   };
+
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.addFilm(this.state.data);

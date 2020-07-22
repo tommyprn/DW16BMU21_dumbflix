@@ -26,15 +26,11 @@
 
 .header-middle {
   display: flex;
-  position: absolute;
-  right: 650px;
 }
 
 .header-right {
   display: flex;
   padding-right: 25px;
-  /* right: 20px;
-  position: absolute; */
 }
 
 .foto-profile {
@@ -45,10 +41,31 @@
 
 .profile-dropdown-list {
   color: black;
-  margin-left: 30px;
+  margin-top: -15px;
+  margin-left: 15px;
 }
 
 .Logout {
   border: none;
-  background-color: white;
+  background-color: transparent;
+  margin-left: -33px;
+}
+
+.login {
+  border: none;
+  border-radius: 8px;
+  background-color: #ee4622;
+  width: 100px;
+  height: 30px;
+  margin-left: 30px;
+  color: white;
+  text-align: center;
+}
+
+.register {
+  border: 1.5px solid white;
+  border-radius: 8px;
+  background-color: black;
+  width: 100px;
+  color: white;
 }

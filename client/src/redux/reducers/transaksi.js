@@ -1,6 +1,7 @@
 import {
   GET_TRANSACTION,
   POST_TRANSACTION,
+  PATCH_TRANSACTION,
 } from "../../constants/action-types";
 import { ActionType } from "redux-promise-middleware";
 
@@ -18,16 +19,22 @@ const POST_TRANSACTION_PENDING = `${POST_TRANSACTION}_${ActionType.Pending}`;
 const POST_TRANSACTION_FULFILLED = `${POST_TRANSACTION}_${ActionType.Fulfilled}`;
 const POST_TRANSACTION_REJECTED = `${POST_TRANSACTION}_${ActionType.Rejected}`;
 
+const PATCH_TRANSACTION_PENDING = `${PATCH_TRANSACTION}_${ActionType.Pending}`;
+const PATCH_TRANSACTION_FULFILLED = `${PATCH_TRANSACTION}_${ActionType.Fulfilled}`;
+const PATCH_TRANSACTION_REJECTED = `${PATCH_TRANSACTION}_${ActionType.Rejected}`;
+
 const transactionReducer = (state = initialState, action) => {
   switch (action.type) {
     case POST_TRANSACTION_PENDING:
     case GET_TRANSACTION_PENDING:
+    case PATCH_TRANSACTION_PENDING:
       return {
         ...state,
         loading: true,
       };
     case POST_TRANSACTION_FULFILLED:
     case GET_TRANSACTION_FULFILLED:
+    case PATCH_TRANSACTION_FULFILLED:
       return {
         ...state,
         loading: false,
@@ -35,6 +42,7 @@ const transactionReducer = (state = initialState, action) => {
       };
     case POST_TRANSACTION_REJECTED:
     case GET_TRANSACTION_REJECTED:
+    case PATCH_TRANSACTION_REJECTED:
       return {
         ...state,
         loading: false,

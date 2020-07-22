@@ -28,7 +28,7 @@ class Movie extends Component {
 
         <div className="judul-movie">
           <img
-            src="https://hyperpix.net/wp-content/uploads/2019/09/joker-logo-font-download-1200x900.jpg"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aaa79357-9476-4c1d-b9a8-6e881f2449d3/ddf2d7e-bcfd0bdb-461b-4dd2-b93c-1dcd68208788.png/v1/fill/w_800,h_310,strp/joker_2019_logo_by_buffy2ville_ddf2d7e-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0zMTAiLCJwYXRoIjoiXC9mXC9hYWE3OTM1Ny05NDc2LTRjMWQtYjlhOC02ZTg4MWYyNDQ5ZDNcL2RkZjJkN2UtYmNmZDBiZGItNDYxYi00ZGQyLWI5M2MtMWRjZDY4MjA4Nzg4LnBuZyIsIndpZHRoIjoiPD04MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.7RnAsTbpBb0qD99K5eiYxf6L64R8hJ2X3alN6yMtljM"
             alt="Jumbotron title"
           />
         </div>
@@ -53,10 +53,14 @@ class Movie extends Component {
           <div className="row justify-content-start">
             {a
               .slice(0, 24)
-              .filter((film) => film.categoryId == 1)
-              .map((moviesfilm) => {
+              .filter((film) => film.categoryId === 1)
+              .map((moviesfilm, i) => {
                 return (
-                  <Link to="/detail" key={moviesfilm.id}>
+                  <Link
+                    to={`/detail/${moviesfilm.id}`}
+                    key={i}
+                    key={moviesfilm.id}
+                  >
                     <div>
                       <img
                         className="timbul"
