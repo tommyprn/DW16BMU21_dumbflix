@@ -1,0 +1,82 @@
+.form-add-film {
+  display: block;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.form-group-desc {
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.form-group-basic {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.custom-input-tahun {
+  border-radius: 5px;
+  border: solid grey;
+  width: 602px;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  left: 367px;
+  position: absolute;
+}
+
+.custom-input-basic {
+  border-radius: 5px;
+  border: solid grey;
+  width: 800px;
+  background-color: rgb(53, 53, 53);
+  color: white;
+}
+
+.category-add-film {
+  position: absolute;
+  right: 367px;
+  border: solid grey !important;
+  width: 170px !important;
+  height: 32px !important;
+  font-size: 13px !important;
+  color: white !important;
+  background-color: rgb(53, 53, 53) !important;
+}
+
+.tombol-save {
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  right: 360px;
+  color: white;
+  background-color: red;
+  width: 200px;
+  height: 30px;
+  font-size: 18px;
+}
+
+.judul-add-film {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  left: 300px;
+  top: 100px;
+}
+
+.custom-input-desc {
+  border-radius: 5px;
+  border: solid grey;
+  width: 800px;
+  height: 100px;
+  background-color: rgb(53, 53, 53);
+  color: white;
+}
+
+.custom-input-episode {
+  border-radius: 5px;
+  border: solid grey;
+  width: 800px;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  margin-bottom: 20px;
+}

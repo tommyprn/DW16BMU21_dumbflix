@@ -1,0 +1,35 @@
+.form-add-episode {
+  display: block;
+  text-align: center;
+  margin-top: 200px;
+}
+
+.tombol-save-episode {
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  top: 450px;
+  right: 367px;
+  color: white;
+  background-color: red;
+  width: 170px;
+  height: 30px;
+  font-size: 18px;
+}
+
+.judul-add-episode {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  left: 367px;
+  top: 170px;
+}
+
+.custom-input {
+  border-radius: 5px;
+  border: solid grey;
+  width: 800px;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,84 @@
+[{
+    "id": 1,
+    "image": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/102381961_3056945904344776_9190895852099469312_n.jpg?_nc_cat=101&_nc_sid=730e14&_nc_eui2=AeHeNxjr4bVnGFMsCTGGXzXVlOdnPUOHlUiU52c9Q4eVSFXMMo9D6-opFvsrT1clbwy3V_yy7zqciBnEbWT_EXAz&_nc_ohc=tNNobrRn3bcAX8jHHdG&_nc_ht=scontent-sin6-1.xx&oh=0ebb4beae0ebfbce61a7a983e8cdf8bb&oe=5EFCE4AE",
+    "name": "The Godfather",
+    "year": "1972",
+    "genre": "Movie"
+},
+{
+    "id": 2,
+    "image": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/102580398_3056945874344779_7809556184121212928_n.jpg?_nc_cat=104&_nc_sid=730e14&_nc_eui2=AeGwn2lBbA1Gh_LyrTEjDc0leUzbH8w9Px95TNsfzD0_Hx7vZF0V0wcdTyCdGc8Vu6eBwMmCHhzzg1Ve3BYmriBU&_nc_ohc=2hk08LKWEP0AX9DzITF&_nc_ht=scontent-sin6-1.xx&oh=dcecfc2d7e820d20b1422c4bc35ab8f1&oe=5EFEFED8",
+    "name": "Avengers: Endgame",
+    "year": "2019",
+    "genre": "Movie"    
+},
+{
+    "id": 3,
+    "image": "https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/100051886_3056945871011446_914147973221318656_n.jpg?_nc_cat=103&_nc_sid=730e14&_nc_eui2=AeH0BAv9Bs-AYOjhBtKKv-4HUGMTygOT2D5QYxPKA5PYPrtjDdBlodnf5UpLsEp9ivxlASKHAq6xEK4l2SiFb6QU&_nc_ohc=VycDMNL8v9EAX-17kQa&_nc_ht=scontent-sin6-2.xx&oh=e9c406321b2f4f3a349a7d03033f627f&oe=5EFDDB09",
+    "name": "Batman: The Dark Knight",
+    "year": "2008",
+    "genre": "Movie"    
+},
+{
+    "id": 4,
+    "image": "https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/102104559_3056945824344784_7876618709719056384_n.jpg?_nc_cat=108&_nc_sid=730e14&_nc_eui2=AeED2qGaeNiGKeMMDMNKDqWuMdSlQAk_9dsx1KVACT_1267rcslj9d7np_6mTE0hJTORRbrlgmHfJRhyZHe7Omq4&_nc_ohc=QJBaRpzqx0cAX-byQG9&_nc_ht=scontent-sin6-2.xx&oh=4844685e095dcce38e6125d2e668241a&oe=5EFD83EC",
+    "name": "Parasite",
+    "year": "2019",
+    "genre": "Movie"    
+},
+{
+    "id": 5,
+    "image": "https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/77391554_3056945771011456_5916263823278342144_n.jpg?_nc_cat=103&_nc_sid=730e14&_nc_eui2=AeEQFgqeg2us486GeOgQGwDAr-E6u6Bv7nOv4Tq7oG_uc_XZVbvWbowtZeT6PWWETUOBMr79u07tVw5B8ofvTnmR&_nc_ohc=JUD7aOpiekEAX9XEcug&_nc_ht=scontent-sin6-2.xx&oh=514926269810b4a24692c5560ad62f26&oe=5EFF4156",
+    "name": "Joker",
+    "year": "2019",
+    "genre": "Movie"    
+},
+{
+    "id": 6,
+    "image": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/101052335_3056945761011457_1108572655855861760_n.jpg?_nc_cat=101&_nc_sid=730e14&_nc_eui2=AeE3ium2AUKfyPpU22LaQAqLwYMRHvyTaa7BgxEe_JNprkHsWB4_kwnF5eNBY8AvVg69VK8rECLNUMURosg6OdkE&_nc_ohc=4-Thf7HBhj4AX_PZDbA&_nc_ht=scontent-sin6-1.xx&oh=7a0bcbf260fdf1b2a3e23697a7fb0280&oe=5EFD4415",
+    "name": "Chernobyl",
+    "year": "2013",
+    "genre": "Movie"    
+},
+{
+    "id": 7,
+    "image": "https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/102421753_3058925867480113_7147209348756799488_n.jpg?_nc_cat=110&_nc_sid=730e14&_nc_ohc=IuHRpb4fv4oAX-hyYRc&_nc_ht=scontent-sin6-2.xx&oh=282be2dd549dae288a3053d6f850e0ef&oe=5EFCC1A2",
+    "name": "Serigala Terakhir",
+    "year": "2009",
+    "genre": "Movies"    
+},
+{
+    "id": 8,
+    "image": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/100773536_3058925860813447_3837789450637672448_n.jpg?_nc_cat=106&_nc_sid=730e14&_nc_ohc=-4jkMOAqAeYAX8c5Iy1&_nc_ht=scontent-sin6-1.xx&oh=e34d1e33a6d380da95004d3422a32db0&oe=5EFCD671",
+    "name": "Grave of the Fireflies",
+    "year": "1988",
+    "genre": "Movies"    
+},
+{
+    "id": 9,
+    "image": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/82859128_3058925794146787_7563103362879586304_n.jpg?_nc_cat=100&_nc_sid=730e14&_nc_ohc=tJ9ibbMyJqkAX_UMaBO&_nc_ht=scontent-sin6-1.xx&oh=18b01214c8285010e6114eb23bf0173e&oe=5EFFDCAD",
+    "name": "My Neighbor Totoro",
+    "year": "1988",
+    "genre": "Movies"    
+},
+{
+    "id": 10,
+    "image": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/102406154_3058925804146786_2400920897813741568_n.jpg?_nc_cat=111&_nc_sid=730e14&_nc_ohc=qfFXcnTEgyYAX8JDI4h&_nc_ht=scontent-sin6-1.xx&oh=eb7f49c09ba7ffc1ec78191ffa3d99da&oe=5EFD3E99",
+    "name": "Suicide Squad",
+    "year": "2016",
+    "genre": "Movies"    
+},
+{
+    "id": 11,
+    "image": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/101087503_3058925797480120_1501081870132051968_n.jpg?_nc_cat=101&_nc_sid=730e14&_nc_ohc=hWENElqj_sUAX_f5hLs&_nc_ht=scontent-sin6-1.xx&oh=a8c3c6cc81f334a844355dec875111f8&oe=5EFDEEC5",
+    "name": "Frozen II",
+    "year": "2019",
+    "genre": "Movies"    
+},
+{
+    "id": 12,
+    "image": "https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/101961086_3058925784146788_3182123917938524160_n.jpg?_nc_cat=111&_nc_sid=730e14&_nc_ohc=1SE3NOXrQVwAX9OYgl1&_nc_ht=scontent-sin6-1.xx&oh=7ef295481dd410fc3f9191e7ca580af0&oe=5EFDB453",
+    "name": "A Quiet Place",
+    "year": "2020",
+    "genre": "Movies"    
+}]
